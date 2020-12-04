@@ -29,10 +29,15 @@ namespace Project
 
         public void confirm_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
             double tax = 0.06; // 6% tax
-            double taxAmount = 0.00; 
-            double SubTotal = 0.00; 
-            double total = 0.00; 
+            double taxAmount = 0.00;
+            double SubTotal = 0.00;
+            double total = 0.00;
 
             foreach (ListViewItem item in SubTotalListView.Items)
             {
@@ -41,9 +46,9 @@ namespace Project
             taxAmount = tax * total; // tax amount
             SubTotal = total + taxAmount; // total amount
 
-            PizzaPrice.Text = "$" + total.ToString("0.00"); 
-            taxPriceLabel.Text = "$" + taxAmount.ToString("0.00"); 
-            TotalPrice.Text = "$" + SubTotal.ToString("0.00"); 
+            PizzaPrice.Text = "$" + total.ToString("0.00");
+            taxPriceLabel.Text = "$" + taxAmount.ToString("0.00");
+            TotalPrice.Text = "$" + SubTotal.ToString("0.00");
         }
     }
 }

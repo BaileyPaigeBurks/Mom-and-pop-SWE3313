@@ -153,6 +153,7 @@ namespace Project
             this.Controls.Add(this.lbCart);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
